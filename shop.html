@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" sizes="512x512" href="hlogo.png">
+    <title>PRECIOUS SOLUTIONS PVT LTD</title>
+    <link rel="stylesheet" href="sstyles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="brand">
+        <div class="logo-container">
+          <img src="logo.png" alt="Precious Solutions Pvt Ltd">
+        </div>
+        <a href="index.html">Solutions</a>
+      </div>
+      <div class="nav-items">
+        <a href="index.html">HOME</a>
+        <a href="shop.html">SHOP</a>
+        <a href="cart.html">CART</a>
+        <a href="Contact.html">CONTACT</a>
+      </div>
+    </nav>
+    <main>
+      <aside>
+        <section>
+          <title>Rating</title>
+          <input type="range" id="range" min="0" max="5" value="0" list="values" />
+          <datalist id="values">
+            <option value="0" label="0"></option>
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5" label="5"></option>
+          </datalist>
+        </section>
+        <section>
+          <title>Price Range</title>
+          <ul>
+            <li>
+              <input id="0-500" type="checkbox" class="ui-checkbox" name="prange" value="0-500" />
+              <label for="0-500">Rs.0-500</label>
+            </li>
+            <li>
+              <input id="500-1000" type="checkbox" class="ui-checkbox" name="prange" value="500-1000" />
+              <label for="500-1000">Rs.500-1000</label>
+            </li>
+            <li>
+              <input id="1000-5000" type="checkbox" class="ui-checkbox" name="prange" value="1000-5000" />
+              <label for="1000-5000">Rs.1000-5000</label>
+            </li>
+            <li>
+              <input id="5000on" type="checkbox" class="ui-checkbox" name="prange" value="5000+" />
+              <label for="5000on">Rs.5000+</label>
+            </li>
+          </ul>
+        </section>
+      </aside>
+      <main-content>
+        <input id="search" type="text" placeholder="Search" />
+        <div class="filters">
+          <div id="all" class="filter active">
+            <button> All</button>
+          </div>
+          <div id="men" class="filter">
+            <button> Keyboard</button>
+          </div>
+          <div id="women" class="filter">
+            <button> Motherboard</button>
+          </div>
+          <div id="jewellery" class="filter">
+            <button> Mouse</button>
+          </div>
+          <div id="Headsets" class="filter">
+            <button> Headsets</button>
+          </div>
+          <div id="Cables" class="filter">
+            <button> Cables</button>
+          </div>
+          <div id="Pendrive" class="filter">
+            <button> Pendrive</button>
+          </div>
+          <div id="electronics" class="filter">
+            <button> Repairs/Services</button>
+          </div>
+        </div>
+        <section>
+          <div class="items"></div>
+        </section>
+      </main-content>
+    </main>
+    <script src="./sscript.js"></script>
+    <footer>
+      <div class="info-section">
+        <div class="info-box">
+          <i class="fas fa-truck fa-3x"></i>
+          <h3>Free shipping above ₹499</h3>
+          <p>Delivery happens within 2-3 days</p>
+        </div>
+        <div class="info-box">
+          <i class="fas fa-coins fa-3x"></i>
+          <h3>Payment options</h3>
+          <p>Cash on Delivery & Online Payment</p>
+        </div>
+        <div class="info-box">
+          <i class="fas fa-phone-alt fa-3x"></i>
+          <h3>Customer support</h3>
+          <p>support@etechbazaar.com</p>
+        </div>
+      </div>
+      <br>
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="logo">
+            <img src="logo.png" alt="Precious Solutions Pvt Ltd">
+            <p>SELLING JOYFULLY 😊</p>
+          </div>
+          <div class="contact">
+            <p>Got questions? Call us!</p>
+            <p class="phone">
+              <i class="fas fa-phone"></i>8329923264
+            </p>
+          </div>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h3>Essential Policies</h3>
+            <ul>
+              <li>
+                <a href="Shipping Policy.html">Shipping Policy</a>
+              </li>
+              <li>
+                <a href="Terms & Conditions.html">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="Privacy Policy.html">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="Refund Policy.html">Refund Policy</a>
+              </li>
+              <li>
+                <a href="Contact Us.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Our Mission</h3>
+            <ul>
+              <li>
+                <a href="#"> Our mission is to provide our customers <br> with high-quality products and exceptional <br> service that exceed their expectations. </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <strong>Precious Solutions Pvt. Ltd.</strong> - All rights reserved </p>
+          <p>© <strong>Developed by Bhavesh & Vikrant Patil Pvt. Ltd.</strong> - All rights reserved </p>
+          <div class="payment-icons">
+            <img src="visa.png" alt="Visa">
+            <img src="mastercard.png" alt="MasterCard">
+            <img src="amex.png" alt="American Express">
+            <img src="club.png" alt="Diners Club">
+            <img src="jbc.png" alt="JBC">
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

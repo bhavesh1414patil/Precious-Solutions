@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="512x512" href="hlogo.png">
+    <title>PRECIOUS SOLUTIONS PVT LTD</title>
+    <link rel="stylesheet" href="admin.css">
+  </head>
+  <body>
+    <div class="login-container">
+      <img src="logo.png" style="width: 300px;" alt="Precious Solutions Pvt Ltd">
+      <h2>Admin Login</h2>
+      <input type="email" id="adminEmail" placeholder="Enter Email">
+      <input type="password" id="adminPassword" placeholder="Enter Password">
+      <button onclick="adminLogin()">Login</button>
+      <p id="errorMessage"></p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="auth.js"></script>
+  </body>
+</html>

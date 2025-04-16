@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="512x512" href="hlogo.png">
+    <title>PRECIOUS SOLUTIONS PVT LTD</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Home.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="brand">
+        <div class="logo-container">
+          <img src="logo.png" alt="Precious Solutions Pvt Ltd">
+        </div>
+        <a href="index.html">Solutions</a>
+      </div>
+      <div class="nav-items">
+        <a href="index.html">HOME</a>
+        <a href="shop.html">SHOP</a>
+        <a href="cart.html">CART</a>
+        <a href="Contact.html">CONTACT</a>
+      </div>
+    </nav>
+    <script>
+      let currentImageIndex = 0;
+      const images = ['background1.jpg', 'background.jpg', 'background5.jpg', 'background9.jpg', 'background10.jpg', 'bb.jpg'];
+
+      function changeBackground(direction) {
+        currentImageIndex += direction;
+        if (currentImageIndex < 0) {
+          currentImageIndex = images.length - 1;
+        } else if (currentImageIndex >= images.length) {
+          currentImageIndex = 0;
+        }
+        document.body.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+      }
+      document.body.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+      setInterval(() => changeBackground(2), 1000);
+    </script>
+    </div>
+    <div class="text-box">
+      <div class="logo-container1">
+        <img src="logo.png" alt="Precious Solutions Pvt Ltd">
+      </div>
+      <a href="shop.html" id="button1">
+        <br>Visit Our Shop </a>
+    </div>
+    <div class="product-card">
+      <div class="product-image">
+        <video autoplay loop playsinline width="100%">
+          <source src="video.mp4" type="video/mp4"> Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="product-info">
+        <h3>Verilux® USB C Hub 6 in 1 with 87W Power Delivery & USB C Data Transfer Multiport Adapter with 4K@30Hz HDMI SD/TF Card Reader 3.0 USB Hub Type C Hub for MacBook iPhone with Storage Bag 24CM Long Cable</h3>
+        <br>
+        <h2> ₹1,282</h2>
+        <div class="buttons">
+          <button class="add-to-cart">
+            <a href="shop.html">UpComing</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <h2 class="section-title">SHOP BY CATEGORIES</h2>
+    <div class="category-container">
+      <div class="category-card">
+        <img src="laptop.jpg" alt="Laptop">
+        <div class="overlay"></div>
+        <span class="category-name">Laptop</span>
+      </div>
+      <div class="category-card">
+        <img src="desktop.jpg" alt="Desktop">
+        <div class="overlay"></div>
+        <span class="category-name">Desktop</span>
+      </div>
+      <div class="category-card">
+        <img src="workstation.jpg" alt="Workstation">
+        <div class="overlay"></div>
+        <span class="category-name">Workstation</span>
+      </div>
+      <div class="category-card">
+        <img src="accessories.jpg" alt="Accessories">
+        <div class="overlay"></div>
+        <span class="category-name">Accessories</span>
+      </div>
+      <div class="category-card">
+        <img src="Keybo.jpg" alt="Keyboard">
+        <div class="overlay"></div>
+        <span class="category-name">Keyboard-Mouse</span>
+      </div>
+      <div class="category-card">
+        <img src="Repair.jpg" alt="Repair/Services">
+        <div class="overlay"></div>
+        <span class="category-name">Repair/Services</span>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 30px; height: 10px;">
+      <a href="shop.html" id="button1">
+        <br>View all products </a>
+    </div>
+    </nav>
+    </section>
+    <section class="services-section">
+      <h2 class="section-title">OUR <span>SERVICES</span>
+      </h2>
+      <div class="services-container">
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/1803/1803202.png" alt="Reparing & Maintainace" />
+          </div>
+          <h3>Reparing & Maintainace</h3>
+          <div class="service-divider"></div>
+          <p> At our computer shop, experienced technicians repair, maintain, and upgrade systems, ensuring efficient performance and reliable computing solutions. Our skilled team utilizes advanced diagnostics to promptly resolve issues and deliver lasting improvements. </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwQJT872eex-e1mLmso4rJMyyqV2aaLkmpBA&s" alt="PC Building" />
+          </div>
+          <h3>PC Building</h3>
+          <div class="service-divider"></div>
+          <p> At our computer shop, expert builders assemble custom PCs, integrating high-quality components for peak performance, reliability, and optimized cooling. Our specialists design tailored systems to perfectly match your unique computing needs. </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq9uEhKp3PLoqon9_iurHDkBha_3M88mb5Zg&s" alt="Second-Hand PC & Laptops" />
+          </div>
+          <h3>Second-Hand PC & Laptops</h3>
+          <div class="service-divider"></div>
+          <p> At our shop, we buy and sell second-hand PCs and laptops, ensuring quality-tested devices and competitive prices for reliable computing. Our experienced team inspects, refurbishes, and certifies every unit, providing exceptional value for both casual users and professionals. </p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 30px; height: 10px;">
+        <a href="Contact.html" id="button1">
+          <br>Contact for more </a>
+      </div>
+    </section>
+    <div class="info-section">
+      <div class="info-box">
+        <i class="fas fa-truck fa-3x"></i>
+        <h3>Free shipping above ₹499</h3>
+        <p>Delivery happens within 2-3 days</p>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-coins fa-3x"></i>
+        <h3>Payment options</h3>
+        <p>Cash on Delivery & Online Payment</p>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-phone-alt fa-3x"></i>
+        <h3>Customer support</h3>
+        <p>support@etechbazaar.com</p>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="logo">
+            <img src="logo.png" alt="Precious Solutions Pvt Ltd">
+            <p>SELLING JOYFULLY 😊</p>
+          </div>
+          <div class="contact">
+            <p>Got questions? Call us!</p>
+            <p class="phone">
+              <i class="fas fa-phone"></i>8329923264
+            </p>
+          </div>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h3>Essential Policies</h3>
+            <ul>
+              <li>
+                <a href="Shipping Policy.html">Shipping Policy</a>
+              </li>
+              <li>
+                <a href="Terms & Conditions.html">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="Privacy Policy.html">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="Refund Policy.html">Refund Policy</a>
+              </li>
+              <li>
+                <a href="Contact Us.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Our Mission</h3>
+            <ul>
+              <li>
+                <a href="#"> Our mission is to provide our customers <br> with high-quality products and exceptional <br> service that exceed their expectations. </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <strong>Precious Solutions Pvt. Ltd.</strong> - All rights reserved </p>
+          <p>© <strong>Developed by Bhavesh & Vikrant Patil Pvt. Ltd.</strong> - All rights reserved </p>
+          <div class="payment-icons">
+            <img src="visa.png" alt="Visa">
+            <img src="mastercard.png" alt="MasterCard">
+            <img src="amex.png" alt="American Express">
+            <img src="club.png" alt="Diners Club">
+            <img src="jbc.png" alt="JBC">
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body> 

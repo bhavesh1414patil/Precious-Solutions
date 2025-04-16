@@ -1,0 +1,72 @@
+body {
+  font-family: "Inter", sans-serif;
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .login-container {
+    background: radial-gradient( 100% 100% at 100% 0%, #e1e4e7 0%, #ffffff 100% );
+    padding:30px;
+    border-radius:5px;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+    text-align:center;
+    margin-top: 100px;
+  }
+  .admin-container {
+    background: radial-gradient( 100% 100% at 100% 0%, #cbd7e3 0%, #ffffff 100% );
+    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align:center;
+  }
+  input {
+    display:block;
+    width: 280px;
+    padding:10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+ 
+  button {
+    font-size: 18px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background: radial-gradient( 100% 100% at 100% 0%, #22383e 0%, #4d649d 100% );
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    border-radius: 0.3em;
+    color: #fff;
+    height: 3em;
+    width: 185px;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  
+  button:hover {
+    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #141e69;
+    transform: translateY(-0.1em);
+  }
+  
+  button:active {
+    box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+    transform: translateY(0em);
+  }
+  table {
+    font-family: sans-serif;
+    width:auto;
+    border-collapse:collapse;
+    margin-top:10px;
+  }
+  table,th,td {
+    border:1px solid #13998e;
+    padding:8px;
+  }
+  th {
+    background: radial-gradient( 100% 100% at 100% 0%, #22383e 0%, #4d649d 100% );
+    color:white;
+  }
+  

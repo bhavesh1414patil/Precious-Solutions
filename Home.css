@@ -1,0 +1,531 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background6.jpg');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: 100% 500px;
+    background-position-y: 2%;
+    color: #000;
+}
+
+.logo-container img {
+    width: 200px;  
+    height: 50px; 
+    filter: brightness(0) saturate(100%) invert(57%) sepia(15%) saturate(300%) hue-rotate(140deg);
+  }
+  .logo-container1 img {
+    width: 500px;  
+    height: 130px; 
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    background: radial-gradient( 100% 100% at 100% 0%, #12404d 0%, #221f1f 100% );
+    border-bottom: 1px solid white;
+    padding: 1px;
+    font-size: 1rem;
+  }
+  
+  nav .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+  }
+  nav .brand a{
+    margin-top: 10px;
+    margin-left: 2px;
+  }
+  
+  nav .nav-items a {
+    margin: 0 1rem;
+  }
+  .nav-items a:hover {
+    color: rgb(111, 185, 190); /* Change text color on hover */
+  
+  
+  }
+  
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+/* Hero Section */
+.header {
+    min-height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.text-box {
+    width: 90%;
+    color: #3a3b91;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+/* Hero Button */
+#button1 {
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background: radial-gradient( 100% 100% at 100% 0%, #22383e 0%, #4d649d 100% );
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    border-radius: 0.3em;
+    color: #fff;
+    height: 3em;
+    width: 200px;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  
+  #button1:hover {
+    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #141e69;
+    transform: translateY(-0.1em);
+  }
+  
+  #button1:active {
+    box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+    transform: translateY(0em);
+  }
+  
+  
+  
+/* Services Section */
+.services-section {
+    max-width: 1200px;
+    margin: auto;
+    padding:  20px;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.section-title span {
+    color: #e51b23;
+}
+
+/* Services Container */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* Individual Service Card */
+.service-card {
+    background: radial-gradient( 100% 100% at 100% 0%, #d7dce1 0%, #ffffff 100% );
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 3px;
+    text-align: left;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Service Icon */
+.service-icon {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.service-icon img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Service Title */
+.service-card h3 {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Divider Under Title */
+.service-divider {
+    width: 50px;
+    height: 3px;
+    background-color: #e51b23;
+    margin: 10px auto;
+}
+
+/* Service Description */
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+
+    #prev, #next {
+        font-size: 30px;
+        padding: 100px 20px;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background: #111;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.contact {
+    font-size: 16px;
+}
+
+.phone {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4718ef;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    background: #222;
+    padding: 8px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: rgb(111, 185, 190);
+}
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 40px 20px;
+    background: #f9f9f9;
+}
+
+.info-box {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.info-box i {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.info-box h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #000;
+}
+
+.info-box p {
+    font-size: 14px;
+    color: #666;
+}
+
+.info-box .fa-truck { color: #f99f63; }
+.info-box .fa-coins { color: #28a745; } 
+
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+.footer-links {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgb(177, 192, 209);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: rgb(111, 185, 190);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+.payment-icons img {
+    height: 30px;
+    margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    .footer-top, .footer-links, .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links div {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Product Card */
+.product-card {
+    display: flex;
+    width: 80%;
+    background: radial-gradient( 100% 100% at 100% 0%, #e1e4e7 0%, #ffffff 100% );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+}
+
+/* Product Image */
+.product-image {
+    width: 50%;
+    background: linear-gradient(to bottom, #ffffff, #dcdcdc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Product Info */
+.product-info {
+    width: 50%;
+    padding: 20px;
+}
+
+.product-info h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+}
+
+.product-info p {
+    font-size:17px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 17px;
+    font-weight: bold;
+    border: 2px solid #071e68;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 30px;
+    font-family: Arial, sans-serif;
+}
+button:hover {
+    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #141e69;
+    transform: translateY(-0.1em);
+  }
+
+.add-to-cart {
+    background: radial-gradient( 100% 100% at 100% 0%, #22383e 0%, #4d649d 100% );
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    color: white;
+}
+
+.know-more {
+    background: radial-gradient( 100% 100% at 100% 0%, #22383e 0%, #4d649d 100% );
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    color: #fafafa;
+}
+
+.add-to-cart:hover {
+    background-color: #100d0e;
+}
+
+.know-more:hover {
+    background-color: #f8d7da;
+}
+
+
+/* Section Title */
+.section-title {
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 55px;
+}
+
+/* Category Container */
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Category Cards */
+.category-card {
+    position: relative;
+    width: 300px;
+    height: 280px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(100, 93, 93, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category-card img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+/* Dark Gradient Overlay */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+/* Category Name */
+.category-name {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.category-card:hover {
+    transform: scale(1.05);
+}

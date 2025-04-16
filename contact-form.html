@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Complete Your Order</h2>
+
+        <h3>Order Summary</h3>
+        <p id="orderSummary"></p> <!-- Display Cart Items and Total Price -->
+
+        <form action="" id="contactForm">
+            <div class="alert">Your message sent</div>
+
+            <div class="inputBox">
+                <input type="text" id="name" placeholder="Your name...." />
+            </div>
+
+            <div class="inputBox">
+                <input type="email" id="emailid" placeholder="Your Email....." />
+            </div>
+
+            <div class="inputBox">
+                <textarea id="msgContent" cols="30" rows="10" placeholder="Message"></textarea>
+            </div>
+
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <button onclick="makePayment()">Make Payment</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="contact-form.js"></script>
+
+    <script>
+        // Get order details from localStorage
+        const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+        const totalPrice = localStorage.getItem('totalPrice');
+        
+        if (cartItems && totalPrice) {
+            let orderSummary = '<ul>';
+            cartItems.forEach(item => {
+                orderSummary += `<li>${item.name} - $${item.price}</li>`;
+            });
+            orderSummary += `<li><strong>Total: $${totalPrice}</strong></li>`;
+            orderSummary += '</ul>';
+
+            // Show order summary on the page
+            document.getElementById('orderSummary').innerHTML = orderSummary;
+        }
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAY43SDaXkYWpVgsllPal5ZDYCDiG9Hfws",
+            authDomain: "contactform-f63d8.firebaseapp.com",
+            databaseURL: "https://contactform-f63d8-default-rtdb.firebaseio.com",
+            projectId: "contactform-f63d8",
+            storageBucket: "contactform-f63d8.appspot.com",
+            messagingSenderId: "569083896628",
+            appId: "1:569083896628:web:dabcf6afa7b0733976fb61"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        var contactFormDB = firebase.database().ref("contactForm");
+
+        document.getElementById("contactForm").addEventListener("submit", submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            var name = getElementVal("name");
+            var emailid = getElementVal("emailid");
+            var msgContent = getElementVal("msgContent");
+
+            // Add cart details to the message
+            msgContent += "\n\nOrder Details:\n" + JSON.stringify(cartItems) + "\nTotal Price: $" + totalPrice;
+
+            saveMessages(name, emailid, msgContent);
+
+            // Enable alert
+            document.querySelector(".alert").style.display = "block";
+
+            // Remove the alert after 3 seconds
+            setTimeout(() => {
+                document.querySelector(".alert").style.display = "none";
+            }, 3000);
+
+            // Reset the form
+            document.getElementById("contactForm").reset();
+        }
+
+        const saveMessages = (name, emailid, msgContent) => {
+            var newContactForm = contactFormDB.push();
+
+            newContactForm.set({
+                name: name,
+                emailid: emailid,
+                msgContent: msgContent,
+            });
+        };
+
+        const getElementVal = (id) => {
+            return document.getElementById(id).value;
+        };
+
+        // Make Payment (redirects to the payment page)
+        function makePayment() {
+            // Here you can integrate with a payment gateway (like Stripe, PayPal, etc.)
+            alert('Proceeding to payment...');
+            window.location.href = 'payment-page.html';  // Redirect to the payment page
+        }
+    </script>
+</body>
+</html>

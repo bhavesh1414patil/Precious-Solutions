@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" sizes="512x512" href="hlogo.png">
+    <title>PRECIOUS SOLUTIONS PVT LTD</title>
+    <link rel="stylesheet" href="./cstyles.css">
+  </head>
+  <body>
+    <nav>
+      <div class="brand">
+        <div class="logo-container">
+          <img src="logo.png" alt="Precious Solutions Pvt Ltd">
+        </div>
+        <a href="index.html">Solutions</a>
+      </div>
+      <div class="nav-items">
+        <a href="index.html">HOME</a>
+        <a href="shop.html">SHOP</a>
+        <a href="cart.html">CART</a>
+        <a href="Contact.html">CONTACT</a>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="items"></div>
+      <div style="padding: 2rem;" class="right">
+        <h2 style="text-align: center; font-weight: 400; margin-bottom: 20px;">Checkout List</h2>
+        <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+          <div class="list-container"></div>
+          <div style="display: flex; justify-content: space-between; padding: 10px 0; border-top:1px solid white; border-bottom:1px solid white;">
+            <div>Total</div>
+            <div id="total-price"></div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+          <button id="openContactForm" style="height: 40px; padding: 10px; width: 100%; cursor: pointer;">Complete Order</button>
+        </div>
+      </div>
+    </div>
+    <div id="checkoutModal" style="display: none; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+
+      background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); width: 90%; max-width: 400px; z-index: 1000;">
+      <span onclick="closeModal()" style="position: absolute; top: 10px; right: 15px; font-size: 24px; font-weight: bold; cursor: pointer; color: #888; transition: color 0.2s ease;" onmouseover="this.style.color='#000'" onmouseout="this.style.color='#888'"> &times; </span>
+      <h1 style="font-size: 24px; margin-bottom: 10px; text-align: center;">Complete Your Order</h1>
+      <h3 style="font-size: 18px; margin-bottom: 15px; text-align: center; color: #555;">Order Summary</h3>
+      <p id="orderSummary" style="font-size: 14px; color: #333; margin-bottom: 20px; text-align: center;"></p>
+      <form id="contactForm" style="display: flex; flex-direction: column; gap: 15px;">
+        <div class="alert" style="display: none; background-color: #e0ffe0; color: #2e7d32; padding: 10px; border-radius: 8px; text-align: center;"> Your order has been placed proceed with payment. </div>
+        <div class="inputBox">
+          <input type="text" id="name" placeholder="Your Name..." required pattern="[A-Za-z\s]+" title="Name should contain letters only" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; outline: none; font-size: 14px;" />
+        </div>
+        <div class="inputBox">
+          <input type="email" id="emailid" placeholder="Your Email..." required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; outline: none; font-size: 14px;" />
+        </div>
+        <div class="inputBox">
+          <input type="text" id="contact" placeholder="Your Contact..." required pattern="\d{10}" maxlength="10" minlength="10" title="Please enter exactly 10 digits" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; outline: none; font-size: 14px;" />
+        </div>
+        <div class="inputBox">
+          <textarea id="msgContent" cols="30" rows="4" placeholder="Your Address..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; outline: none; font-size: 14px; resize: none;"></textarea>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 5px;">
+          <button type="submit" style="height: 45px; width: 100%; background-color: #7387b1; color: white; border: none; font-size: 16px; font-weight: 600; cursor: pointer; transition: background-color 0.3s ease;"> Submit Order Details </button>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 5px;">
+          <button id="rzp-button1" style="height: 45px; width: 100%; background-color: #21f325; color: white; border: none; font-size: 16px; font-weight: 600; cursor: pointer; transition: background-color 0.3s ease;"> Payment Checkout </button>
+        </div>
+      </form>
+    </div>
+    <script>
+      function openModal() {
+        document.getElementById("checkoutModal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("checkoutModal").style.display = "none";
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="./cscript.js"></script>
+    <div class="info-section">
+      <div class="info-box">
+        <i class="fas fa-truck fa-3x"></i>
+        <h3>Free shipping above ₹499</h3>
+        <p>Delivery happens within 2-3 days</p>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-coins fa-3x"></i>
+        <h3>Payment options</h3>
+        <p>Cash on Delivery & Online Payment</p>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-phone-alt fa-3x"></i>
+        <h3>Customer support</h3>
+        <p>support@etechbazaar.com</p>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="logo">
+            <img src="logo.png" alt="Precious Solutions Pvt Ltd">
+            <p>SELLING JOYFULLY 😊</p>
+          </div>
+          <div class="contact">
+            <p>Got questions? Call us!</p>
+            <p class="phone">
+              <i class="fas fa-phone"></i>8329923264
+            </p>
+          </div>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h3>Essential Policies</h3>
+            <ul>
+              <li>
+                <a href="Shipping Policy.html">Shipping Policy</a>
+              </li>
+              <li>
+                <a href="Terms & Conditions.html">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="Privacy Policy.html">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="Refund Policy.html">Refund Policy</a>
+              </li>
+              <li>
+                <a href="Contact Us.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Our Mission</h3>
+            <ul>
+              <li>
+                <a href="#"> Our mission is to provide our customers <br> with high-quality products and exceptional <br> service that exceed their expectations. </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <strong>Precious Solutions Pvt. Ltd.</strong> - All rights reserved </p>
+          <p>© <strong>Developed by Bhavesh & Vikrant Patil Pvt. Ltd.</strong> - All rights reserved </p>
+          <div class="payment-icons">
+            <img src="visa.png" alt="Visa">
+            <img src="mastercard.png" alt="MasterCard">
+            <img src="amex.png" alt="American Express">
+            <img src="club.png" alt="Diners Club">
+            <img src="jbc.png" alt="JBC">
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
