@@ -422,17 +422,7 @@ const productList = [
 			count: 150
 		},
 	},
-	{
-		id: 17,
-		title: "Dummy",
-		price: 898,
-		category: "Laptop",
-		image: "https://m.media-amazon.com/images/I/81QdLppSePL._SL1500_.jpg",
-		rating: {
-			rate: 4,
-			count: 112
-		},
-	},
+	
 ];
 
 
